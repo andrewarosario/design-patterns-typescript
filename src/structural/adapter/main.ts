@@ -1,14 +1,8 @@
-import {
-  EmailValidatorProtocol,
-  EmailValidatorFnProtocol,
-} from './validation/email-validator-protocol';
+import { EmailValidatorProtocol, EmailValidatorFnProtocol } from './validation/email-validator-protocol';
 import { EmailValidatorClassAdapter } from './validation/email-validator-class-adapter';
 import { emailValidatorFnAdapter } from './validation/email-validator-fn-adapter';
 
-function validaEmailClass(
-  emailValidator: EmailValidatorProtocol,
-  email: string,
-): void {
+function validaEmailClass(emailValidator: EmailValidatorProtocol, email: string): void {
   if (emailValidator.isEmail(email)) {
     console.log('Email é válido (CLASS)');
   } else {
@@ -16,10 +10,7 @@ function validaEmailClass(
   }
 }
 
-function validaEmailFn(
-  emailValidator: EmailValidatorFnProtocol,
-  email: string,
-): void {
+function validaEmailFn(emailValidator: EmailValidatorFnProtocol, email: string): void {
   if (emailValidator(email)) {
     console.log('Email é válido (FN)');
   } else {

@@ -3,9 +3,7 @@ import { Tv } from './device/tv';
 import { RemoteControl } from './remote-control/remote-control';
 import { RemoteControlWithVolume } from './remote-control/remote-control-with-volume';
 
-export function clientCode(
-  abstraction: RemoteControl | RemoteControlWithVolume,
-): void {
+export function clientCode(abstraction: RemoteControl | RemoteControlWithVolume): void {
   abstraction.togglePower();
   if (!('volumeUp' in abstraction)) return;
 

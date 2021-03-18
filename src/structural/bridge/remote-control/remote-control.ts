@@ -5,8 +5,6 @@ export class RemoteControl {
 
   togglePower(): void {
     this.device.setPower(!this.device.getPower());
-    console.log(
-      `${this.device.getName} power status: ${this.device.getPower()}`,
-    );
+    console.log(`${this.device.getName} power status: ${this.device.getPower()}`);
   }
 }

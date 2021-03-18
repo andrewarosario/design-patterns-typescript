@@ -4,8 +4,7 @@ import { EnterpriseVehicle } from '../vehicle/enterprise-vehicle';
 import { Vehicle } from '../vehicle/vehicle';
 import { MakeVehicleCustomerFactory } from './customer-vehicle-factory';
 
-export class MakeEnterpriseVehicleCustomerFactory
-  implements MakeVehicleCustomerFactory {
+export class MakeEnterpriseVehicleCustomerFactory implements MakeVehicleCustomerFactory {
   makeCustomer(customerName: string): Customer {
     return new EnterpriseCustomer(customerName);
   }

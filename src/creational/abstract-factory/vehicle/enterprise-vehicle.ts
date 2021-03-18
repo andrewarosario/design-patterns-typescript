@@ -5,8 +5,6 @@ export class EnterpriseVehicle implements Vehicle {
   constructor(public name: string, private readonly customer: Customer) {}
 
   pickUp(): void {
-    console.log(
-      `${this.name} está buscando ${this.customer.name} (ENTERPRISE)`,
-    );
+    console.log(`${this.name} está buscando ${this.customer.name} (ENTERPRISE)`);
   }
 }
